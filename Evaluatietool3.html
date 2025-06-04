@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluatietool Profielintegratie</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #5b2c82;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 50px;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .profiel-card {
+      background-color: #f8f6fa;
+      border-left: 5px solid #5b2c82;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+    .profiel-card h2 {
+      color: #5b2c82;
+      margin-top: 0;
+    }
+    .vraagblok {
+      margin-bottom: 20px;
+    }
+    label {
+      margin-right: 10px;
+    }
+    button {
+      background-color: #5b2c82;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #47256a;
+    }
+    #resultaat {
+      margin-top: 40px;
+      background: #f2f2f7;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Evaluatietool Profielintegratie</h1>
+<img src="fontys-logo.png" alt="Fontys Logo">  </header>
+  <main>
+    <p>
+      Beste student,<br><br>
+      Deze evaluatietool helpt jou én de programmamanager inzicht te krijgen in welke beroepsprofielen je tijdens je stage ervaring hebt opgedaan. Beantwoord per stelling in hoeverre je hiermee in aanraking bent gekomen (1 = nauwelijks ervaren, 5 = veel ervaring). Is een stelling niet van toepassing op jouw situatie? Kies dan voor 'n.v.t.'.<br><br>
+      De uitslag van deze evaluatie kun je gebruiken tijdens je ontwikkelgesprekken. Zo krijg je inzicht in welke profielen nog onderbelicht zijn en welke je juist veel hebt ervaren. Dit helpt jou en je begeleider om samen gericht te sturen op een betere en completere profielintegratie binnen je leertraject.
+    </p>
+
+    <form id="evalForm">
+    <!-- SPORTMANAGER -->
+<div class="profiel-card">
+  <h2>Sportmanager</h2>
+  <p><em>De sportmanager is verantwoordelijk voor het plannen, organiseren en coördineren van sportactiviteiten of evenementen. Hij of zij werkt projectmatig en stemt regelmatig af met partners zoals scholen, sportclubs, gemeentes of zorginstellingen.</em></p>
+  <div class="vraagblok">
+    <p>Ik heb sportactiviteiten voorbereid of uitgevoerd samen met collega's en/of medestudenten.</p>
+    <label><input type="radio" name="sm1" value="1">1</label>
+    <label><input type="radio" name="sm1" value="2">2</label>
+    <label><input type="radio" name="sm1" value="3">3</label>
+    <label><input type="radio" name="sm1" value="4">4</label> 
+    <label><input type="radio" name="sm1" value="5">5</label>
+    <label><input type="radio" name="sm1" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb een budget van een beweegactiviteit/evenement besproken of bekeken.</p>
+    <label><input type="radio" name="sm2" value="1">1</label>
+    <label><input type="radio" name="sm2" value="2">2</label>
+    <label><input type="radio" name="sm2" value="3">3</label>
+    <label><input type="radio" name="sm2" value="4">4</label>
+    <label><input type="radio" name="sm2" value="5">5</label>
+    <label><input type="radio" name="sm2" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb deelgenomen aan overleggen over sportprojecten.</p>
+    <label><input type="radio" name="sm3" value="1">1</label>
+    <label><input type="radio" name="sm3" value="2">2</label>
+    <label><input type="radio" name="sm3" value="3">3</label>
+    <label><input type="radio" name="sm3" value="4">4</label>
+    <label><input type="radio" name="sm3" value="5">5</label>
+    <label><input type="radio" name="sm3" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb in mijn opdrachten samengewerkt met bijvoorbeeld scholen, sportclubs of buurthuizen.</p>
+    <label><input type="radio" name="sm4" value="1">1</label>
+    <label><input type="radio" name="sm4" value="2">2</label>
+    <label><input type="radio" name="sm4" value="3">3</label>
+    <label><input type="radio" name="sm4" value="4">4</label>
+    <label><input type="radio" name="sm4" value="5">5</label>
+    <label><input type="radio" name="sm4" value="na">N.V.T.</label>
+  </div>
+</div>
+
+<!-- BUURTSPORTCOACH -->
+<div class="profiel-card">
+  <h2>Buurtsportcoach</h2>
+  <p><em>De buurtsportcoach verbindt sport met de buurt of wijk. Hij of zij richt zich op het opzetten en begeleiden van sportieve activiteiten voor specifieke doelgroepen, zoals kinderen, jongeren, ouderen of mensen met een beperking.</em></p>
+  <div class="vraagblok">
+    <p>Ik heb activiteiten bijgewoond voor een specifieke doelgroep (zoals ouderen of jongeren).</p>
+    <label><input type="radio" name="bu1" value="1">1</label>
+    <label><input type="radio" name="bu1" value="2">2</label>
+    <label><input type="radio" name="bu1" value="3">3</label>
+    <label><input type="radio" name="bu1" value="4">4</label>
+    <label><input type="radio" name="bu1" value="5">5</label>
+    <label><input type="radio" name="bu1" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb geholpen bij activiteiten die gericht zijn op een buurt of wijk.</p>
+    <label><input type="radio" name="bu2" value="1">1</label>
+    <label><input type="radio" name="bu2" value="2">2</label>
+    <label><input type="radio" name="bu2" value="3">3</label>
+    <label><input type="radio" name="bu2" value="4">4</label>
+    <label><input type="radio" name="bu2" value="5">5</label>
+    <label><input type="radio" name="bu2" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb deelnemers ondersteund bij het uitvoeren van activiteiten.</p>
+    <label><input type="radio" name="bu3" value="1">1</label>
+    <label><input type="radio" name="bu3" value="2">2</label>
+    <label><input type="radio" name="bu3" value="3">3</label>
+    <label><input type="radio" name="bu3" value="4">4</label>
+    <label><input type="radio" name="bu3" value="5">5</label>
+    <label><input type="radio" name="bu3" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb gezien dat activiteiten worden afgestemd op de groep (bijvoorbeeld niveau of leeftijd).</p>
+    <label><input type="radio" name="bu4" value="1">1</label>
+    <label><input type="radio" name="bu4" value="2">2</label>
+    <label><input type="radio" name="bu4" value="3">3</label>
+    <label><input type="radio" name="bu4" value="4">4</label>
+    <label><input type="radio" name="bu4" value="5">5</label>
+    <label><input type="radio" name="bu4" value="na">N.V.T.</label>
+  </div>
+</div>
+
+<!-- KRACHT & CONDITIESPECIALIST -->
+<div class="profiel-card">
+  <h2>Kracht- en Conditiespecialist</h2>
+  <p><em>Deze specialist begeleidt sporters bij fysieke training, met een nadruk op kracht, uithoudingsvermogen, blessurepreventie en herstel. Ook kennis over trainingsleer, periodisering en herstelmethodes zijn essentieel binnen dit profiel.</em></p>
+  <div class="vraagblok">
+    <p>Ik heb training gericht op kracht of conditie gezien of geholpen met uitvoeren.</p>
+    <label><input type="radio" name="kr1" value="1">1</label>
+    <label><input type="radio" name="kr1" value="2">2</label>
+    <label><input type="radio" name="kr1" value="3">3</label>
+    <label><input type="radio" name="kr1" value="4">4</label>
+    <label><input type="radio" name="kr1" value="5">5</label>
+    <label><input type="radio" name="kr1" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb uitleg gekregen over het opbouwen van een trainingsschema.</p>
+    <label><input type="radio" name="kr2" value="1">1</label>
+    <label><input type="radio" name="kr2" value="2">2</label>
+    <label><input type="radio" name="kr2" value="3">3</label>
+    <label><input type="radio" name="kr2" value="4">4</label>
+    <label><input type="radio" name="kr2" value="5">5</label>
+    <label><input type="radio" name="kr2" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb oefeningen gezien die helpen om blessures te voorkomen of herstellen.</p>
+    <label><input type="radio" name="kr3" value="1">1</label>
+    <label><input type="radio" name="kr3" value="2">2</label>
+    <label><input type="radio" name="kr3" value="3">3</label>
+    <label><input type="radio" name="kr3" value="4">4</label>
+    <label><input type="radio" name="kr3" value="5">5</label>
+    <label><input type="radio" name="kr3" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb sporters begeleid tijdens krachtoefeningen.</p>
+    <label><input type="radio" name="kr4" value="1">1</label>
+    <label><input type="radio" name="kr4" value="2">2</label>
+    <label><input type="radio" name="kr4" value="3">3</label>
+    <label><input type="radio" name="kr4" value="4">4</label>
+    <label><input type="radio" name="kr4" value="5">5</label>
+    <label><input type="radio" name="kr4" value="na">N.V.T.</label>
+  </div>
+</div>
+
+<!-- BEWEEG- EN LEEFSTIJLCOACH -->
+<div class="profiel-card">
+  <h2>Beweeg- en Leefstijlcoach</h2>
+  <p><em>De beweeg- en leefstijlcoach ondersteunt mensen bij het maken van gezondere keuzes op het gebied van bewegen, voeding, slaap, stress en ontspanning. De coach leert hoe je gesprekken voert, doelen stelt en samen stappen zet naar een gezonder leven.</em></p>
+  <div class="vraagblok">
+    <p>Ik heb gesprekken met deelnemers gezien of gevoerd over een gezondere leefstijl (Voeding, beweging, slaap, ontspanning, stress).</p>
+    <label><input type="radio" name="be1" value="1">1</label>
+    <label><input type="radio" name="be1" value="2">2</label>
+    <label><input type="radio" name="be1" value="3">3</label>
+    <label><input type="radio" name="be1" value="4">4</label>
+    <label><input type="radio" name="be1" value="5">5</label>
+    <label><input type="radio" name="be1" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb gezien hoe doelen zoals meer bewegen of gezonder eten, worden opgesteld.</p>
+    <label><input type="radio" name="be2" value="1">1</label>
+    <label><input type="radio" name="be2" value="2">2</label>
+    <label><input type="radio" name="be2" value="3">3</label>
+    <label><input type="radio" name="be2" value="4">4</label>
+    <label><input type="radio" name="be2" value="5">5</label>
+    <label><input type="radio" name="be2" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb gezien hoe iemand in een gesprek gemotiveerd wordt naar een gezondere leefstijl.</p>
+    <label><input type="radio" name="be3" value="1">1</label>
+    <label><input type="radio" name="be3" value="2">2</label>
+    <label><input type="radio" name="be3" value="3">3</label>
+    <label><input type="radio" name="be3" value="4">4</label>
+    <label><input type="radio" name="be3" value="5">5</label>
+    <label><input type="radio" name="be3" value="na">N.V.T.</label>
+  </div>
+  <div class="vraagblok">
+    <p>Ik heb kennisgemaakt met methodes om gedrag te veranderen (zoals doelen stellen).</p>
+    <label><input type="radio" name="be4" value="1">1</label>
+    <label><input type="radio" name="be4" value="2">2</label>
+    <label><input type="radio" name="be4" value="3">3</label>
+    <label><input type="radio" name="be4" value="4">4</label>
+    <label><input type="radio" name="be4" value="5">5</label>
+    <label><input type="radio" name="be4" value="na">N.V.T.</label>
+  </div>
+</div>
+
+    <button type="button" onclick="berekenResultaat()">Toon Resultaat</button>
+    <div id="resultaat"></div>
+  </main>
+
+  <script>
+    function berekenResultaat() {
+      const profielen = {
+        "Sportmanager": ["sm1", "sm2", "sm3", "sm4"],
+        "Buurtsportcoach": ["bu1", "bu2", "bu3", "bu4"],
+        "Kracht- en Conditiespecialist": ["kr1", "kr2", "kr3", "kr4"],
+        "Beweeg- en Leefstijlcoach": ["be1", "be2", "be3", "be4"]
+      };
+
+      const scores = {};
+
+      for (const profiel in profielen) {
+        let totaal = 0;
+        profielen[profiel].forEach(vraag => {
+          const input = document.querySelector(`input[name="${vraag}"]:checked`);
+          if (input && input.value !== "na") {
+            totaal += parseInt(input.value);
+          }
+        });
+        scores[profiel] = totaal;
+      }
+
+      let resultaatHTML = "<h2>Resultaten</h2><ul>";
+      for (const [profiel, score] of Object.entries(scores)) {
+        resultaatHTML += `<li><strong>${profiel}:</strong> ${score}</li>`;
+      }
+      resultaatHTML += "</ul>";
+
+      const scoreEntries = Object.entries(scores).filter(([_, score]) => score > 0);
+      if (scoreEntries.length > 0) {
+        const hoogste = scoreEntries.reduce((a, b) => a[1] >= b[1] ? a : b);
+        const laagste = scoreEntries.reduce((a, b) => a[1] <= b[1] ? a : b);
+        resultaatHTML += `<p><strong>Meest ervaren profiel:</strong> ${hoogste[0]}</p>`;
+        resultaatHTML += `<p><strong>Minst ervaren profiel:</strong> ${laagste[0]}</p>`;
+      }
+
+      document.getElementById("resultaat").innerHTML = resultaatHTML;
+    }
+  </script>
+</body>
+</html>
